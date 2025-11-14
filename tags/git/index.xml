@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随笔 on My New Hugo Site</title><link>https://zyz1002.github.io/tags/%E9%9A%8F%E7%AC%94/</link><description>Recent content in 随笔 on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 14 Nov 2025 18:20:00 +0800</lastBuildDate><atom:link href="https://zyz1002.github.io/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub 部署流程复盘</title><link>https://zyz1002.github.io/posts/git-deploy-notes/</link><pubDate>Fri, 14 Nov 2025 18:20:00 +0800</pubDate><guid>https://zyz1002.github.io/posts/git-deploy-notes/</guid><description>&lt;p>最近在折腾 Hugo + GitHub Pages，整理一下问答要点，免得下次忘记：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on My New Hugo Site</title><link>https://zyz1002.github.io/tags/git/</link><description>Recent content in Git on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 14 Nov 2025 18:20:00 +0800</lastBuildDate><atom:link href="https://zyz1002.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub 部署流程复盘</title><link>https://zyz1002.github.io/posts/git-deploy-notes/</link><pubDate>Fri, 14 Nov 2025 18:20:00 +0800</pubDate><guid>https://zyz1002.github.io/posts/git-deploy-notes/</guid><description>&lt;p>最近在折腾 Hugo + GitHub Pages，整理一下问答要点，免得下次忘记：&lt;/p>
 
 &lt;h2 id="基本概念">基本概念
  &lt;a class="heading-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="Copy link to this section">
@@ -40,26 +40,4 @@
  &lt;/svg>
  &lt;/a>
 &lt;/h2>
-&lt;p>当前属于“半自动”：脚本帮我把源码提交 + 构建 + 推送都跑一遍，但仍然在本地执行。若改用 GitHub Actions，就可以只 push 源码，服务器自动构建并部署到 &lt;code>gh-pages&lt;/code> 分支。这一步以后再尝试。&lt;/p></description></item><item><title>第一篇：你好，世界</title><link>https://zyz1002.github.io/posts/welcome-to-yuu-blog/</link><pubDate>Fri, 14 Nov 2025 17:15:00 +0800</pubDate><guid>https://zyz1002.github.io/posts/welcome-to-yuu-blog/</guid><description>&lt;p>终于把 Hugo 站点搭好了！这篇文章主要记录一下初始化过程，也方便以后回顾。&lt;/p>
-
-&lt;h2 id="我做了什么">我做了什么
- &lt;a class="heading-anchor" href="#%e6%88%91%e5%81%9a%e4%ba%86%e4%bb%80%e4%b9%88" aria-label="Copy link to this section">
- &lt;svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
- &lt;path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;ul>
-&lt;li>选择了 &lt;code>hugo-theme-void&lt;/code> 主题，喜欢它的简洁风格。&lt;/li>
-&lt;li>配置了导航菜单、社交链接等基础信息。&lt;/li>
-&lt;li>写了几篇示例文章，确保生成的页面不再空空如也。&lt;/li>
-&lt;/ul>
-
-&lt;h2 id="接下来">接下来
- &lt;a class="heading-anchor" href="#%e6%8e%a5%e4%b8%8b%e6%9d%a5" aria-label="Copy link to this section">
- &lt;svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
- &lt;path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
- &lt;/svg>
- &lt;/a>
-&lt;/h2>
-&lt;p>后续会把一些旧文章慢慢搬过来，同时也会记录新的想法。欢迎在社交主页找到我交流！&lt;/p></description></item></channel></rss>
+&lt;p>当前属于“半自动”：脚本帮我把源码提交 + 构建 + 推送都跑一遍，但仍然在本地执行。若改用 GitHub Actions，就可以只 push 源码，服务器自动构建并部署到 &lt;code>gh-pages&lt;/code> 分支。这一步以后再尝试。&lt;/p></description></item></channel></rss>
