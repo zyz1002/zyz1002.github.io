@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>全部文章 on My New Hugo Site</title><link>https://zyz1002.github.io/posts/</link><description>Recent content in 全部文章 on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 14 Nov 2025 18:20:00 +0800</lastBuildDate><atom:link href="https://zyz1002.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub 部署流程复盘</title><link>https://zyz1002.github.io/posts/git-deploy-notes/</link><pubDate>Fri, 14 Nov 2025 18:20:00 +0800</pubDate><guid>https://zyz1002.github.io/posts/git-deploy-notes/</guid><description>&lt;p>最近在折腾 Hugo + GitHub Pages，整理一下问答要点，免得下次忘记：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>全部文章 on My New Hugo Site</title><link>https://zyz1002.github.io/posts/</link><description>Recent content in 全部文章 on My New Hugo Site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 14 Nov 2025 19:30:00 +0800</lastBuildDate><atom:link href="https://zyz1002.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>deploy.ps1 脚本详解</title><link>https://zyz1002.github.io/posts/deploy-script-notes/</link><pubDate>Fri, 14 Nov 2025 19:30:00 +0800</pubDate><guid>https://zyz1002.github.io/posts/deploy-script-notes/</guid><description>&lt;p>趁着把 Hugo 站点部署流程跑通，记录一下 PowerShell 脚本到底做了什么，以及 &lt;code>.ps1&lt;/code> 是什么格式。&lt;/p>
+
+&lt;h2 id="ps1-是什么">&lt;code>.ps1&lt;/code> 是什么
+ &lt;a class="heading-anchor" href="#ps1-%e6%98%af%e4%bb%80%e4%b9%88" aria-label="Copy link to this section">
+ &lt;svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+ &lt;path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>.ps1&lt;/code> 是 &lt;strong>PowerShell Script&lt;/strong> 的扩展名，和 &lt;code>.sh&lt;/code>（bash）、&lt;code>.bat&lt;/code>（CMD）类似，用来保存 PowerShell 命令的集合。&lt;/li>
+&lt;li>运行方式：在 PowerShell 终端里执行 &lt;code>.\deploy.ps1&lt;/code>，脚本就会按照写好的顺序一条条命令地执行。&lt;/li>
+&lt;/ul>
+
+&lt;h2 id="脚本结构拆解">脚本结构拆解
+ &lt;a class="heading-anchor" href="#%e8%84%9a%e6%9c%ac%e7%bb%93%e6%9e%84%e6%8b%86%e8%a7%a3" aria-label="Copy link to this section">
+ &lt;svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+ &lt;path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+ &lt;/svg>
+ &lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>参数区（Param）&lt;/strong>&lt;/p></description></item><item><title>GitHub 部署流程复盘</title><link>https://zyz1002.github.io/posts/git-deploy-notes/</link><pubDate>Fri, 14 Nov 2025 18:20:00 +0800</pubDate><guid>https://zyz1002.github.io/posts/git-deploy-notes/</guid><description>&lt;p>最近在折腾 Hugo + GitHub Pages，整理一下问答要点，免得下次忘记：&lt;/p>
 
 &lt;h2 id="基本概念">基本概念
  &lt;a class="heading-anchor" href="#%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="Copy link to this section">
